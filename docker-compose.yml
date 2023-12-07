@@ -13,5 +13,5 @@ services:
       UMASK: 002
       TZ: Europe/London
     volumes:
-      - /containers/sabnzbd:/config
+      - /tank/containers/sabnzbd:/config
       - /tank/downloads:/tank/downloads
