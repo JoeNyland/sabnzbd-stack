@@ -15,4 +15,7 @@ services:
     volumes:
       - /tank/containers/sabnzbd:/config
       - /tank/downloads:/tank/downloads
-      - /tank/media:/tank/media
+      - /tank/media/movies:/tank/media/movies
+      - /tank/media/tv:/tank/media/tv
+      - /tank/media/music:/tank/media/music
+      - /tank/media/xxx:/tank/media/xxx
