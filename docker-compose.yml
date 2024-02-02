@@ -5,8 +5,7 @@ services:
     image: ghcr.io/hotio/sabnzbd
     container_name: sabnzbd
     restart: unless-stopped
-    ports:
-      - 8090:8080
+    network_mode: host
     environment:
       PUID: 1000
       PGID: 1000
