@@ -8,6 +8,7 @@ services:
     network_mode: host
     environment:
       WEBUI_PORTS: 8090
+      ARGS: --server [::]:8091 # Workaround to make SABnzbd listen on IPv6 as well as IPv4
       PUID: 1000
       PGID: 1000
       UMASK: 002
