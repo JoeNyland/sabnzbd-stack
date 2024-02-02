@@ -7,6 +7,7 @@ services:
     restart: unless-stopped
     network_mode: host
     environment:
+      WEBUI_PORTS: 8090
       PUID: 1000
       PGID: 1000
       UMASK: 002
