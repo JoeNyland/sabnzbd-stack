@@ -12,6 +12,10 @@ services:
       PGID: 1000
       UMASK: 002
       TZ: Europe/London
+    labels:
+      traefik.enable: true
+      traefik.http.services.sabnzbd.loadbalancer.server.port: 8090
+      traefik.http.routers.sabnzbd.rule: Host(`sabnzbd`)
     volumes:
       - /containers/sabnzbd:/config
       - /downloads:/downloads
