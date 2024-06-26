@@ -22,4 +22,3 @@ services:
       - /tank/media/movies:/tank/media/movies
       - /tank/media/tv:/tank/media/tv
       - /tank/media/music:/tank/media/music
-      - /tank/media/xxx:/tank/media/xxx
