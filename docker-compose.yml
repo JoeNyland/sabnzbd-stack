@@ -14,6 +14,10 @@ services:
       traefik.enable: true
       traefik.http.services.sabnzbd.loadbalancer.server.port: 8090
       traefik.http.routers.sabnzbd.rule: Host(`sabnzbd`)
+      traefik.http.routers.sabnzbd.middlewares: sabnzbd-ipallowlist
+      traefik.http.middlewares.sabnzbd-ipallowlist.ipallowlist.sourcerange: >
+        2a00:23c8:bda0:b310::/64,
+        10.10.0.0/16
     volumes:
       - /containers/sabnzbd:/config
       - /downloads:/downloads
