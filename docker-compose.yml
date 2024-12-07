@@ -13,6 +13,7 @@ services:
       TZ: Europe/London
     labels:
       traefik.enable: true
+      traefik.http.services.sabnzbd.loadbalancer.server.port: 8090
       traefik.http.routers.sabnzbd.rule: Host(`sabnzbd`)
       traefik.http.routers.sabnzbd.middlewares: trusted-ipallowlist
     volumes:
