@@ -4,7 +4,7 @@ services:
     container_name: sabnzbd
     restart: unless-stopped
     ports:
-      - 8090:8080
+      - 8090:8090
     environment:
       WEBUI_PORTS: 8090
       PUID: 991
