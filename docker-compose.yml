@@ -3,7 +3,8 @@ services:
     image: ghcr.io/hotio/sabnzbd
     container_name: sabnzbd
     restart: unless-stopped
-    network_mode: host
+    ports:
+      - 8090:8080
     environment:
       WEBUI_PORTS: 8090
       PUID: 991
