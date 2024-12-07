@@ -18,3 +18,7 @@ services:
     volumes:
       - /containers/sabnzbd:/config
       - /downloads:/downloads
+
+networks:
+  default:
+    enable_ipv6: true
