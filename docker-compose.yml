@@ -3,17 +3,16 @@ services:
     image: ghcr.io/hotio/sabnzbd
     container_name: sabnzbd
     restart: unless-stopped
-    ports:
-      - 8090:8090
+    networks:
+      - default
+      - proxy
     environment:
-      WEBUI_PORTS: 8090
       PUID: 991
       PGID: 994
       UMASK: 002
       TZ: Europe/London
     labels:
       traefik.enable: true
-      traefik.http.services.sabnzbd.loadbalancer.server.port: 8090
       traefik.http.routers.sabnzbd.rule: Host(`sabnzbd`)
       traefik.http.routers.sabnzbd.middlewares: trusted-ipallowlist
     volumes:
@@ -23,3 +22,5 @@ services:
 networks:
   default:
     enable_ipv6: true
+  proxy:
+    external: true
