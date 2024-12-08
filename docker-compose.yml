@@ -5,6 +5,7 @@ services:
     restart: unless-stopped
     networks:
       - default
+      - servarr
       - proxy
       - metrics
     environment:
@@ -26,4 +27,6 @@ networks:
   proxy:
     external: true
   metrics:
+    external: true
+  servarr:
     external: true
