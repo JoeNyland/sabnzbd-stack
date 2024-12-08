@@ -6,6 +6,7 @@ services:
     networks:
       - default
       - proxy
+      - metrics
     environment:
       PUID: 991
       PGID: 994
@@ -23,4 +24,6 @@ networks:
   default:
     enable_ipv6: true
   proxy:
+    external: true
+  metrics:
     external: true
