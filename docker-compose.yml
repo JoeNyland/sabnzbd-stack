@@ -1,5 +1,6 @@
 services:
   sabnzbd:
+    container_name: sabnzbd
     image: ghcr.io/hotio/sabnzbd
     restart: unless-stopped
     networks:
